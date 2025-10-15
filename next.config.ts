@@ -4,10 +4,12 @@ const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'dist',
+  distDir: 'out',
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+  },
+  basePath: process.env.NODE_ENV === 'production' ? '/hashedin-count-down' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/hashedin-count-down/' : '',
 };
 
 export default nextConfig;
