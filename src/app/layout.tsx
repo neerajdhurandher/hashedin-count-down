@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Countdown to October 17, 2025",
+  title: "Countdown to in Hashedin",
   description: "A beautiful, interactive countdown website with calendar animation that counts down to October 17th, 2025.",
 };
 

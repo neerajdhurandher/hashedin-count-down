@@ -17,12 +17,20 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
     { label: 'Seconds', value: seconds }
   ];
 
-  // Calculate progress from October 13, 2025 to October 17, 2025 (4 days total)
-  const startDate = new Date('2025-10-13T00:00:00');
+  // Calculate progress from February 28, 2022 to October 17, 2025
+  const startDate = new Date('2022-02-28T00:00:00');
   const targetDate = new Date('2025-10-17T00:00:00');
+  const currentTime = new Date();
+  
+  // Calculate total days between start and end
   const totalDuration = targetDate.getTime() - startDate.getTime();
-  const currentTime = new Date().getTime();
-  const elapsed = Math.max(0, currentTime - startDate.getTime());
+  const totalDays = Math.ceil(totalDuration / (1000 * 60 * 60 * 24));
+  
+  // Calculate days already spent
+  const elapsed = Math.max(0, currentTime.getTime() - startDate.getTime());
+  const daysSpent = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+  
+  // Calculate progress percentage
   const progressPercentage = isComplete ? 100 : Math.min(100, Math.max(0, (elapsed / totalDuration) * 100));
 
   return (
@@ -40,6 +48,9 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
         <p className="text-xl md:text-2xl text-gray-300">
           to October 17, 2025
         </p>
+        <h3 className="text-2xl md:text-3xl font-semibold text-white mt-6 mb-2 margin-top-2rem">
+          Time Remaining in Hashedin
+        </h3>
       </motion.div>
 
       {/* Countdown Grid */}
@@ -107,10 +118,16 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
       >
         <div className="glass p-4 progress-bar-div">
           <div className="flex justify-between text-sm text-gray-300 mb-2 progress-bar-text">
-            <span>Progress to October 17, 2025</span>
-            <span>{progressPercentage.toFixed(1)}%</span>
+            <span>Feb 28, 2022</span>
+            <span>Journey Progress</span>
+            <span>Oct 17, 2025</span>
           </div>
-          <div className="w-full bg-white bg-opacity-20 rounded-full h-3">
+          <div className="flex justify-between text-xs text-gray-400 mb-3">
+            <span>{daysSpent} days spent</span>
+            <span>{progressPercentage.toFixed(1)}%</span>
+            <span>{totalDays} total days</span>
+          </div>
+          <div className="w-full bg-white bg-opacity-20 rounded-full h-3 margin-top-1rem">
             <motion.div
               initial={{ width: 0 }}
               animate={{ 
