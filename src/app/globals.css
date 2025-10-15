@@ -44,6 +44,53 @@ body {
   margin: 0.8rem;
 }
 
+.lets-go-button{
+  margin-top: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.display-vertical-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin-top-2rem{
+  margin-top: 2rem;
+}
+
+.margin-top-1rem{
+  margin-top: 1rem;
+}
+
+.padding-1rem{
+  padding: 1rem;
+}
+
+.rounded-border{
+  border-radius: 16px;
+}
+
+.box{
+    width: 16rem;
+    height: 6rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.button-box{
+    width: 12rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+}
+
 
 /* Animation keyframes */
 @keyframes glow {

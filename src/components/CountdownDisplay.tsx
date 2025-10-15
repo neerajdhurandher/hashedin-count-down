@@ -17,6 +17,14 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
     { label: 'Seconds', value: seconds }
   ];
 
+  // Calculate progress from October 13, 2025 to October 17, 2025 (4 days total)
+  const startDate = new Date('2025-10-13T00:00:00');
+  const targetDate = new Date('2025-10-17T00:00:00');
+  const totalDuration = targetDate.getTime() - startDate.getTime();
+  const currentTime = new Date().getTime();
+  const elapsed = Math.max(0, currentTime - startDate.getTime());
+  const progressPercentage = isComplete ? 100 : Math.min(100, Math.max(0, (elapsed / totalDuration) * 100));
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4">
       {/* Title */}
@@ -72,16 +80,16 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ 
-            duration: 0.8,
+            duration: 20,
             type: 'spring',
             stiffness: 150,
             damping: 10
           }}
           className="text-center"
         >
-          <div className="glass p-12 pulse-animation">
+          <div className="glass p-12 pulse-animation margin-top-2rem">
             <h2 className="text-5xl md:text-7xl font-bold text-white glow-text mb-4">
-              🎉 TIME'S UP! 🎉
+              🎉 TIME&apos;S UP! 🎉
             </h2>
             <p className="text-xl md:text-2xl text-gray-300">
               October 17, 2025 has arrived!
@@ -100,13 +108,13 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
         <div className="glass p-4 progress-bar-div">
           <div className="flex justify-between text-sm text-gray-300 mb-2 progress-bar-text">
             <span>Progress to October 17, 2025</span>
-            <span>{isComplete ? '100%' : `${Math.max(0, 100 - (days / 365) * 100).toFixed(1)}%`}</span>
+            <span>{progressPercentage.toFixed(1)}%</span>
           </div>
           <div className="w-full bg-white bg-opacity-20 rounded-full h-3">
             <motion.div
               initial={{ width: 0 }}
               animate={{ 
-                width: isComplete ? '100%' : `${Math.max(0, 100 - (days / 365) * 100)}%`
+                width: `${progressPercentage.toFixed(1)}%`
               }}
               transition={{ duration: 2, delay: 1.5 }}
               className="bg-gradient-to-r from-purple-400 to-pink-400 h-3 rounded-full"

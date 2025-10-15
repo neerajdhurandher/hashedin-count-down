@@ -22,6 +22,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
     "🎉 Best of Luck! 🎉",
     "✨ Your Journey Begins! ✨",
     "🚀 Ready to Soar! 🚀",
+    "📖 A New Chapter Starts!",
     "🌟 Time to Shine! 🌟"
   ];
 
@@ -102,16 +103,16 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mb-12"
+            className="mb-12r display-vertical-center margin-top-2rem"
           >
-            <div className="glass p-8 max-w-2xl">
+            <div className="glass p-8 max-w-2xl padding-1rem">
               <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
                 October 17, 2025 is Here! 🎊
               </h2>
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                The countdown is complete! Whatever awaited you on this special date, 
-                we hope it brings you joy, success, and wonderful memories. 
-                The journey continues from here!
+                Finally the wait is over! Whatever awaited you for this special date, 
+                I hope it brings you joy, success, and wonderful memories. 
+                A new journey continues from here!
               </p>
             </div>
           </motion.div>
@@ -121,13 +122,13 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="space-y-6"
+            className="space-y-6 display-vertical-center"
           >
             {/* Celebration Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="glass p-4 text-center"
+                className="glass p-4 text-center box"
               >
                 <div className="text-3xl font-bold text-yellow-400">🎯</div>
                 <div className="text-white font-semibold">Target Reached</div>
@@ -136,7 +137,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
               
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="glass p-4 text-center"
+                className="glass p-4 text-center box"
               >
                 <div className="text-3xl font-bold text-green-400">⏰</div>
                 <div className="text-white font-semibold">Perfect Timing</div>
@@ -145,7 +146,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
               
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="glass p-4 text-center"
+                className="glass p-4 text-center box"
               >
                 <div className="text-3xl font-bold text-blue-400">🚀</div>
                 <div className="text-white font-semibold">Next Chapter</div>
@@ -159,7 +160,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={onStartOver}
-                className="glass px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300"
+                className="glass px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300 box button-box"
               >
                 🔄 Start Over
               </motion.button>
@@ -168,7 +169,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => typeof window !== 'undefined' && window.location.reload()}
-                className="glass px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300"
+                className="glass px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300 box button-box"
               >
                 🎊 Celebrate More
               </motion.button>

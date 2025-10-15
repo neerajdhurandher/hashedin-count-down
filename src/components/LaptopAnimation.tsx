@@ -51,8 +51,8 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
         <h1 className="text-4xl md:text-6xl font-bold text-white glow-text mb-4">
           Time to Get Started!
         </h1>
-        <p className="text-lg md:text-xl text-gray-300">
-          Your journey begins now...
+        <p className="text-lg md:text-xl text-gray-300 margin-top-1rem">
+          Your new journey begins now...
         </p>
       </motion.div>
 
@@ -77,7 +77,7 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
               initial={{ rotateX: 0 }}
               animate={isClosing ? { rotateX: -90 } : { rotateX: 0 }}
               transition={{ 
-                duration: 3,
+                duration: 5,
                 ease: 'easeInOut',
                 type: 'tween'
               }}
@@ -92,11 +92,11 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
                 <motion.div
                   initial={{ opacity: 1 }}
                   animate={isClosing ? { opacity: 0 } : { opacity: 1 }}
-                  transition={{ duration: 1.5 }}
+                  transition={{ duration: 5 }}
                   className="text-center"
                 >
                   <div className="text-green-400 text-2xl font-mono mb-2">
-                    {"> Ready to start"}
+                    {"> Hashedin by Deloitte"}
                   </div>
                   <div className="text-green-400 text-lg font-mono animate-pulse">
                     _
@@ -109,7 +109,7 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
             </motion.div>
 
             {/* Laptop Keyboard/Base */}
-            <div className="w-80 h-8 bg-gray-200 rounded-b-lg border-4 border-gray-300 border-t-0 relative">
+            <div className="w-80 h-6 bg-gray-200 rounded-b-lg border-4 border-gray-300 border-t-0 relative">
               {/* Trackpad */}
               <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-gray-100 rounded border border-gray-300" />
               
@@ -125,7 +125,7 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
             </div>
 
             {/* Laptop Hinge */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-72 h-2 bg-gray-400 rounded-full" />
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-80 h-2 bg-gray-400 rounded-full" />
           </motion.div>
 
           {/* Glow Effect */}
@@ -149,7 +149,7 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
         transition={{ duration: 1, delay: 1 }}
         className="text-center mb-8"
       >
-        <p className="text-lg text-gray-300">
+        <p className="text-lg text-gray-300 margin-top-1rem">
           {!isClosing ? 'Preparing your experience...' : 
            !showLetsGoButton ? 'Laptop is closing...' : 
            'Ready to continue!'}
@@ -170,9 +170,9 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
         >
           <button
             onClick={handleLetsGo}
-            className="glass px-8 py-4 text-xl font-semibold text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 pulse-animation"
+            className="glass px-8 py-4 text-xl font-semibold text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 pulse-animation lets-go-button"
           >
-            🚀 Let's Go!
+            🚀 Let&apos;s Go!
           </button>
         </motion.div>
       )}

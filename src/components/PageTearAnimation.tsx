@@ -53,7 +53,7 @@ const PageTearAnimation: React.FC<PageTearAnimationProps> = ({
     <div className="fixed top-20 right-8 z-30">
       <div className="relative">
         {/* Calendar Base */}
-        <div className="glass-dark p-2 rounded-lg shadow-2xl">
+        <div className="glass-dark p-2 rounded-lg shadow-2xl rounded-border">
           <div className="w-24 h-32 relative overflow-hidden">
             {/* Calendar Header */}
             <div className="bg-red-600 text-white text-xs text-center py-1 rounded-t">
@@ -96,7 +96,7 @@ const PageTearAnimation: React.FC<PageTearAnimationProps> = ({
                         type: 'spring',
                         stiffness: 100
                       }}
-                      className={`
+                      className={`rounded-border 
                         absolute inset-0 bg-white border-b border-gray-200 
                         flex items-center justify-center
                         ${isCurrentPage ? 'shadow-lg' : ''}
