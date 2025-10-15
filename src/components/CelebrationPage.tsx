@@ -132,7 +132,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
               >
                 <div className="text-3xl font-bold text-yellow-400">🎯</div>
                 <div className="text-white font-semibold">Target Reached</div>
-                <div className="text-gray-300 text-sm">Mission Complete</div>
+                <div className="text-gray-300 text-sm">Job Switch</div>
               </motion.div>
               
               <motion.div
@@ -141,7 +141,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
               >
                 <div className="text-3xl font-bold text-green-400">⏰</div>
                 <div className="text-white font-semibold">Perfect Timing</div>
-                <div className="text-gray-300 text-sm">Right on Schedule</div>
+                <div className="text-gray-300 text-sm">Diwali</div>
               </motion.div>
               
               <motion.div
@@ -150,7 +150,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
               >
                 <div className="text-3xl font-bold text-blue-400">🚀</div>
                 <div className="text-white font-semibold">Next Chapter</div>
-                <div className="text-gray-300 text-sm">Journey Continues</div>
+                <div className="text-gray-300 text-sm">in Intuit</div>
               </motion.div>
             </div>
 

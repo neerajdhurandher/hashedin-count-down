@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist',
+  outputFileTracingRoot: __dirname,
   images: {
     unoptimized: true,
   },
