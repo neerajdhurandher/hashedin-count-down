@@ -136,7 +136,7 @@ const CountdownApp = () => {
       )}
 
       {/* Custom Date Picker Toggle */}
-      <div className="absolute top-4 right-4 z-50">
+      <div className="absolute top-4 right-4 z-50" style={{ visibility:"hidden" }}>
         <button
           onClick={() => setShowDatePicker(!showDatePicker)}
           className="glass px-4 py-2 text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300"
