@@ -49,7 +49,7 @@ const LaptopAnimation: React.FC<LaptopAnimationProps> = ({
         className="text-center mb-12"
       >
         <h1 className="text-4xl md:text-6xl font-bold text-white glow-text mb-4">
-          Time to Get Started!
+          Time to Say Good Bye!
         </h1>
         <p className="text-lg md:text-xl text-gray-300 margin-top-1rem">
           Your new journey begins now...

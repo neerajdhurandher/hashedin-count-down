@@ -110,9 +110,9 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onStartOver }) => {
                 October 17, 2025 is Here! 🎊
               </h2>
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                Finally the wait is over! Whatever awaited you for this special date, 
+                Finally the wait is over! Whatever awaited you for this special moment, 
                 I hope it brings you joy, success, and wonderful memories. 
-                A new journey continues from here!
+                A new journey begins from here!
               </p>
             </div>
           </motion.div>
