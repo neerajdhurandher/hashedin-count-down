@@ -50,7 +50,8 @@ const PageTearAnimation: React.FC<PageTearAnimationProps> = ({
   if (!isActive || pages.length === 0) return null;
 
   return (
-    <div className="fixed top-20 right-8 z-30">
+    <div className="fixed top-20 right-8 z-30 md:block hidden">
+      {/* Desktop positioning - hidden on mobile */}
       <div className="relative">
         {/* Calendar Base */}
         <div className="glass-dark p-2 rounded-lg shadow-2xl rounded-border">

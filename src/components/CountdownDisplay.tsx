@@ -48,6 +48,26 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
         <p className="text-xl md:text-2xl text-gray-300">
           to October 17, 2025
         </p>
+        
+        {/* Mobile Calendar Animation - Only visible on mobile */}
+        <div className="md:hidden block mt-4 mb-6 margin-top-1rem">
+          <div className="flex justify-center">
+            <div className="relative w-20 h-24 bg-white rounded-lg shadow-lg border-2 border-gray-200">
+              <div className="absolute top-0 left-0 right-0 bg-red-500 text-white text-xs font-bold text-center py-1 rounded-t-lg">
+                Days Left
+              </div>
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 mt-2">
+                <div className="text-2xl font-bold text-gray-800 text-center">
+                  {days}
+                </div>
+                <div className="text-xs text-gray-600 text-center">
+                  Day{days !== 1 ? 's' : ''}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <h3 className="text-2xl md:text-3xl font-semibold text-white mt-6 mb-2 margin-top-2rem">
           Time Remaining in Hashedin
         </h3>
@@ -124,7 +144,7 @@ const CountdownDisplay: React.FC<CountdownDisplayProps> = ({ countdownData }) =>
           </div>
           <div className="flex justify-between text-xs text-gray-400 mb-3">
             <span>{daysSpent} days spent</span>
-            <span>{progressPercentage.toFixed(1)}%</span>
+            <span>{progressPercentage.toFixed(2)}%</span>
             <span>{totalDays} total days</span>
           </div>
           <div className="w-full bg-white bg-opacity-20 rounded-full h-3 margin-top-1rem">
